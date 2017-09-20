@@ -1,0 +1,39 @@
+﻿<Window x:Class="EducationTest.WindowSolvedTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Результат" Height="438" Width="300"  ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+<Grid Background="WhiteSmoke">
+        <GroupBox Header="" Name="stestName" Background="Khaki">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <GroupBox Grid.Row="0" Margin="2" Header="Количество вопросов" Background="LightGoldenrodYellow">
+                    <TextBlock Margin="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="22" Foreground="Indigo"  Name="stestCountQuestions" FontWeight="Bold"></TextBlock>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Margin="2" Header="Количество ответов" Background="LightGoldenrodYellow">
+                    <TextBlock Margin="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="22" Foreground="DarkKhaki" Name="stestCountAnswers" FontWeight="Bold"></TextBlock>
+                </GroupBox>
+                <GroupBox Grid.Row="2" Margin="2" Header="Количество выбранных ответов " Background="LightGoldenrodYellow">
+                    <TextBlock Margin="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="22" Foreground="DarkGoldenrod" FontWeight="Bold" Name="stestCountStudentAnswers"></TextBlock>
+                </GroupBox>
+                <GroupBox Grid.Row="3" Margin="2" Header="Количество правильных ответов " Background="LightGoldenrodYellow">
+                    <TextBlock Margin="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="22" Foreground="Green" FontWeight="Bold" Name="stestCountTrunessAnswers"></TextBlock>
+                </GroupBox>
+                <GroupBox Grid.Row="4" Margin="2" Header="Количество правильно выбранных ответов " Background="LightGoldenrodYellow">
+                    <TextBlock Margin="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="22" Foreground="Green" FontWeight="Bold"  Name="stestCountTrunessStudentAnswers"></TextBlock>
+                </GroupBox>
+                <Grid Grid.Row="5" Background="GreenYellow">
+                    <Button  Content="Закрыть" Background="Azure" Name="stestCancelWindow" FontFamily="Impact" FontSize="18"  Foreground="Indigo" Margin="5,2,5,2" Click="stestCancelWindow_Click"></Button>
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

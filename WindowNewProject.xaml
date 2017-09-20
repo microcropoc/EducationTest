@@ -1,0 +1,24 @@
+﻿<Window x:Class="EducationTest.WindowNewProject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="128" Width="380" Title="Новый проект" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" >
+    <Grid Background="WhiteSmoke" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Имя Проекта" Background="Khaki" Margin="2">
+
+            <TextBox Name="createNewProjText" Margin="1"></TextBox>
+            
+        </GroupBox>
+        <Grid Grid.Row="1" Background="GreenYellow">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="1" Grid.Column="0" Name="createNewProjBtn" Content="Создать" Click="createNewProjBtn_Click"  Background="Azure" ></Button>
+            <Button Grid.Row="1" Grid.Column="1" Name="cancelNewProjBtn" Content="Отменить" Background="Azure" Click="cancelNewProjBtn_Click" ></Button>
+        </Grid>
+        
+    </Grid>
+</Window>

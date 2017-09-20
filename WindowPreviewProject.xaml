@@ -1,0 +1,15 @@
+﻿<Window x:Class="EducationTest.WindowPreviewProject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Предпросмотр" Height="600" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Name="PreviewGB" Header="Текущий проект" Margin="2" Background="Khaki">
+            <RichTextBox Name="PreviewTextBlock" IsReadOnly="True"  VerticalScrollBarVisibility="Visible" AcceptsReturn="True"></RichTextBox>
+        </GroupBox>
+        <Button Grid.Row="1" Name="previewCancelButton" Content="Закрыть" Background="Azure" Click="previewCancelButton_Click"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="EducationTest.WindowStudentAuthorizationAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Авторизация" Height="200" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Данные пользователя" Background="Khaki">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <GroupBox Grid.Row="0" Header="Имя пользователя" Margin="2">
+                    <TextBox Name="UserNameText" IsReadOnly="True"></TextBox>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Header="Пароль" Margin="2">
+
+                    <TextBox Name="PasswordText"></TextBox>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Ок" Name="authAccountOkButton" Background="Azure" Click="okAccountCreateButton_Click"/>
+            <Button Grid.Column="1" Content="Отмена" Name="authAccountCancelButton" Background="Azure" Click="authAccountCancelButton_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>

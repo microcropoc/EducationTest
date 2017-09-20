@@ -1,0 +1,184 @@
+﻿<Window x:Class="EducationTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Testing 1.0" Height="768" Width="1024" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Тест">
+                <MenuItem Header="Новый" Name="CreateNewProjMenu" Click="CreateNewProjMenu_Click"></MenuItem>
+                <MenuItem Header="Открыть" Name="OpenProjMenu" Click="OpenProjMenu_Click"></MenuItem>
+                <MenuItem Header="Сохранить" Name="SaveProjMenu" Click="SaveProjMenu_Click"></MenuItem>
+                <MenuItem Header="Сохранить как" Name="SaveAsProjMenu" Click="SaveAsProjMenu_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Выход" Click="ExitMenu_Click" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Текщий проект" Name="ProjCurrentProjectMenu">
+                <MenuItem Header="Предпросмотр" Name="ProjPreviewMenu" Click="ProjPreviewMenu_Click"></MenuItem>
+                
+                <MenuItem Header="Настройки проекта" Name="ProjSettingMenu" Click="ProjSettingMenu_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem  Header="Режим тестирования" Background="Gold"  Name="ProjTestingMenu" Click="ProjTestingMenu_Click"></MenuItem>
+            <MenuItem Header="Выход" Name="ProjExitMenu" Click="ProjExitMenu_Click"></MenuItem>
+        </Menu>
+        
+        <GroupBox Grid.Row="1" Header="" Name="NameProjGB" Background="Khaki" >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto" ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="2">
+                <GroupBox  Header="Вопрос №" Background="GreenYellow" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox Grid.Column="1" Name="questNumber"  Text="0/0" IsEnabled="False"  FontSize="25"  VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
+                            <Button Name="decQuestNumber" Grid.Column="0" Content="Назад" FontFamily="Impact"  FontSize="20" Background="Azure"  Foreground="Indigo"  Click="decQuestNumber_Click" />
+                            <Button Name="incQuestNumber" Grid.Column="2" Content="Далее" FontFamily="Impact" FontSize="20"  Background="Azure" Foreground="Indigo"   Click="incQuestNumber_Click"  />
+                    </Grid>
+                </GroupBox>
+                </Grid>
+                <GroupBox Grid.Row="0" Header="Текст вопроса" Height="auto" Width="auto" >
+                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" Height="120" VerticalScrollBarVisibility="Visible"  Grid.Row="1" Name="questField"  Margin="4"></TextBox>
+                </GroupBox>
+
+                <GroupBox Header="Ответы" Background="WhiteSmoke" VerticalAlignment="Center"  Grid.Row="1"  >
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="1">
+                        <StackPanel>
+                            <GroupBox Header="Ответ №1" Background="Gold"  Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer1Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer1Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                            <GroupBox Header="Ответ №2" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer2Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer2Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                            <GroupBox Header="Ответ №3" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer3Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer3Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                            <GroupBox Header="Ответ №4" Background="Gold"  Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer4Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer4Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                            <GroupBox Header="Ответ №5" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer5Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer5Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                            <GroupBox Header="Ответ №6" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer6Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer6Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                            <GroupBox Header="Ответ №7" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer7Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer7Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+                        
+                            <GroupBox Header="Ответ №8" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer8Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer8Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+                            
+                            <GroupBox Header="Ответ №9" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer9Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer9Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+                            
+                            <GroupBox Header="Ответ №10" Background="Gold" Margin="2">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="0" Name="answer10Bool" Margin="1"></CheckBox>
+                                    <TextBox Grid.Column="1" Name="answer10Text" Margin="5,0,0,0"></TextBox>
+                                </Grid>
+                            </GroupBox>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

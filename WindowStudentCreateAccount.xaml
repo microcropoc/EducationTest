@@ -1,0 +1,41 @@
+﻿<Window x:Class="EducationTest.WindowStudentCreateAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Создание учётной записи" Height="250" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Данные пользователя" Background="Khaki">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <GroupBox Grid.Row="0" Header="Имя пользователя">
+                    <TextBox Name="UserNameText" TextChanged="UserNameText_TextChanged"></TextBox>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Header="Пароль для входа">
+                   <StackPanel>
+                        <GroupBox Header="Пароль">
+                            <TextBox Name="PasswordText" TextChanged="PasswordText_TextChanged"></TextBox>
+                        </GroupBox>
+                        <GroupBox Header="Проверка">
+                            <TextBox Name="AddPasswordText" TextChanged="AddPasswordText_TextChanged"></TextBox>
+                        </GroupBox>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Создать" Name="createAccountCreateButton" Background="Azure" Click="createAccountCreateButton_Click"></Button>
+            <Button Grid.Column="1" Content="Отмена" Name="createAccountCancelButton" Background="Azure" Click="createAccountCancelButton_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>

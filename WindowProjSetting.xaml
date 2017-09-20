@@ -1,0 +1,50 @@
+﻿<Window x:Class="EducationTest.WindowProjSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Настройки проекта" Height="280" Width="400" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <GroupBox Grid.Row="0" Header="Текущий проект" Background="Khaki">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <GroupBox Grid.Row="0" Header="Имя проекта" Margin="2">
+                    <TextBox Name="settingProjNameText" DataContext="NameProject"></TextBox>
+                </GroupBox>
+                <GroupBox Grid.Row="1" Header="GUID"  Margin="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Name="settingProjGUIDText" IsReadOnly="True"></TextBox>
+                        <Button Grid.Column="1" Name="settingProjGUIDButton" Content="Генерировать" Background="Azure" Click="settingProjGUIDButton_Click"></Button>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="2" Header="Путь к файлу"  Margin="2">
+                    <TextBox Name="settingProjPathText" IsReadOnly="True"></TextBox>
+                </GroupBox>
+                <GroupBox Grid.Row="3" Header="Ключ шифра"  Margin="2">
+                    <TextBox Name="settingProjKeyCriptText" IsReadOnly="True"></TextBox>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Применить" Name="settingOkButton" Background="Azure" Click="settingOkButton_Click"></Button>
+            <Button Grid.Column="1" Content="Отмена" Name="settingCancelButton" Background="Azure" Click="settingCancelButton_Click"></Button>
+        </Grid>
+        
+    </Grid>
+</Window>
